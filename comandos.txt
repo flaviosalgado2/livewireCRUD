@@ -1,0 +1,17 @@
+#rodar artisan serve em container docker
+php artisan serve --host=0.0.0.0 --port=8000
+
+#remover container
+docker rm ID
+
+#remover imagens
+docker rmi ID
+
+#listar imagens docker
+docker images
+
+#listar containers ativos
+docker ps -a
+
+#refazer container e imagem
+docker-compose up --build -d

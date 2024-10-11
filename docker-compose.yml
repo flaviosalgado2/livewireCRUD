@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php83_workspace
+    ports:
+      - "8000:8000"  # Para o PHP embutido ou Laravel
+      - "9003:9003"  # Para o Xdebug
+    volumes:
+      - ./:/var/www
+    environment:
+      - PHP_VERSION=8.3.12
+      - XDEBUG_MODE=debug
+      - XDEBUG_CLIENT_HOST=host.docker.internal
