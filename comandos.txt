@@ -15,3 +15,9 @@ docker ps -a
 
 #refazer container e imagem
 docker-compose up --build -d
+
+#vite em container docker
+npm run dev -- --host
+
+#rodar tudo junto
+php artisan serve --host=0.0.0.0 & npm run dev -- --host

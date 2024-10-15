@@ -1,4 +1,8 @@
 <div class="container mt-4">
+    <div class="card p-4 mt-2 mb-4 col-3 ms-auto">
+        <h4>Bem-vindo, {{ Auth::user()->name }}</h4>
+        <button wire:click="logout" class="btn btn-danger">Sair do Login</button>
+    </div>
     <button wire:click="openModal" class="btn btn-primary">Criar Entrada de Caixa</button>
 
     @if (session()->has('message'))

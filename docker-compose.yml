@@ -9,6 +9,7 @@ services:
     ports:
       - "8000:8000"  # Para o PHP embutido ou Laravel
       - "9003:9003"  # Para o Xdebug
+      - "5173:5173"  # expondo o Vite
     volumes:
       - ./:/var/www
     environment:
